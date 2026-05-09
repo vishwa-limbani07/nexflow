@@ -834,8 +834,8 @@ body {
 
   /* Footer */
   .footer { padding: 60px 0 32px; }
-  .footer__links { flex-wrap: wrap; gap: 24px; }
-  .footer__col { min-width: calc(50% - 12px); }
+  .footer__links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px 24px; }
+  .footer__col { min-width: 0; }
   .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
 
   /* Cursor off, pointer back on */
@@ -862,7 +862,6 @@ body {
   .testimonial-card { padding: 24px 20px; }
   .how-it-works__pin { padding: 48px 16px; }
   .hiw__connect-grid { grid-template-columns: 1fr; }
-  .footer__col { min-width: 100%; }
-  .footer__links { gap: 16px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
   .mobile-menu__links a { font-size: 26px; }
 }
