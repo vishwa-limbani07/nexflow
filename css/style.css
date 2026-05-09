@@ -384,7 +384,7 @@ body {
   z-index: 3; min-width: 200px;
 }
 /* Pills sit over the right (dashboard) column — never over the text */
-.hero__pill--1 { right: 30%; top: 10%; }
+.hero__pill--1 { right: 30%; top: 20%; }
 .hero__pill--2 { right: 1%;  top: 42%; }
 .hero__pill--3 { right: 24%; bottom: 9%; }
 .hero__pill-icon { font-size: 22px; flex-shrink: 0; }
