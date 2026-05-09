@@ -6,7 +6,7 @@ A high-fidelity SaaS marketing website built with **vanilla HTML, CSS, and JavaS
 
 ## Preview
 
-> Live demo: *(add your Vercel URL here once deployed)*
+> Live demo: (https://nexflow-psi.vercel.app/)
 
 ![NexFlow Hero](https://via.placeholder.com/1200x630/0e0b10/f97316?text=NexFlow+Preview)
 
