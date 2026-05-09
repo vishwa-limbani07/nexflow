@@ -8,8 +8,6 @@ A high-fidelity SaaS marketing website built with **vanilla HTML, CSS, and JavaS
 
 > Live demo: (https://nexflow-psi.vercel.app/)
 
-![NexFlow Hero](https://via.placeholder.com/1200x630/0e0b10/f97316?text=NexFlow+Preview)
-
 ---
 
 ## Features
@@ -93,26 +91,6 @@ npx serve nexflow
 # With Python
 cd nexflow && python3 -m http.server 8080
 ```
-
----
-
-## Deployment
-
-### Vercel (Recommended)
-
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → **Add New Project**
-3. Import the repository
-4. Set **Framework Preset** to `Other`
-5. Set **Root Directory** to `nexflow` (if it's a subfolder)
-6. Click **Deploy**
-
-### GitHub Pages
-
-1. Go to repository **Settings → Pages**
-2. Source: **Deploy from a branch**
-3. Branch: `main` → folder: `/nexflow` (or root if nexflow is the root)
-4. Save — live in ~60 seconds
 
 ---
 
