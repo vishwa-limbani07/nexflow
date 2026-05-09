@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1c1820"/>
+      <stop offset="100%" stop-color="#0e0b10"/>
+    </linearGradient>
+    <linearGradient id="hex-grad" x1="6" y1="3" x2="26" y2="29" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="bolt-grad" x1="12" y1="4" x2="20" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#fed7aa" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="url(#bg-grad)"/>
+
+  <!-- Hexagon shape -->
+  <path d="M16 3 L27 9.5 L27 22.5 L16 29 L5 22.5 L5 9.5 Z" fill="url(#hex-grad)" opacity="0.95"/>
+
+  <!-- Lightning bolt — NexFlow symbol -->
+  <path d="M19 6 L12.5 16.5 L16.5 16.5 L13 26 L21.5 14 L17.2 14 Z" fill="url(#bolt-grad)"/>
+</svg>

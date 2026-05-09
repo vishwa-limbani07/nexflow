@@ -1,0 +1,55 @@
+/* ===== ANIMATION HELPERS ===== */
+/* Initial hidden states are set by GSAP (gsap.set) in JS, NOT here.
+   This prevents elements from being invisible if JS fails to load. */
+
+.split-char { display: inline-block; }
+.split-word { display: inline-block; }
+
+/* ===== GLOW PULSE ===== */
+@keyframes glow-pulse {
+  0%,100% { box-shadow: 0 0 20px rgba(249,115,22,0.15), 0 0 0 1px rgba(249,115,22,0.2); }
+  50%      { box-shadow: 0 0 40px rgba(249,115,22,0.4),  0 0 0 1px rgba(249,115,22,0.4); }
+}
+.pricing-card--popular { animation: glow-pulse 3s ease-in-out infinite; }
+
+/* ===== SHIMMER on gradient text ===== */
+@keyframes shimmer {
+  0%   { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+.hero__title-line--accent,
+.section-title em,
+.cta-section__title em {
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ===== PARTICLE CANVAS ===== */
+.hero__canvas { opacity: 0.6; }
+
+/* ===== PILL ANIMATION ===== */
+@keyframes pill-float-1 {
+  0%,100% { transform: translateY(0px) rotate(-1deg); }
+  50%      { transform: translateY(-12px) rotate(1deg); }
+}
+@keyframes pill-float-2 {
+  0%,100% { transform: translateY(0px) rotate(1deg); }
+  50%      { transform: translateY(-16px) rotate(-1deg); }
+}
+@keyframes pill-float-3 {
+  0%,100% { transform: translateY(0px) rotate(0deg); }
+  50%      { transform: translateY(-10px) rotate(2deg); }
+}
+
+/* ===== BADGE PULSE ===== */
+@keyframes badge-border-pulse {
+  0%,100% { border-color: rgba(249,115,22,0.3); }
+  50%      { border-color: rgba(249,115,22,0.7); }
+}
+.hero__badge { animation: badge-border-pulse 3s ease-in-out infinite; }
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .logos__inner { animation: none; }
+}
