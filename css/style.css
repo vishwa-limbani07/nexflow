@@ -112,12 +112,17 @@ body {
 .btn--full { width: 100%; justify-content: center; }
 .mobile-menu .btn--full { margin: 0 32px; width: calc(100% - 64px); }
 
-/* Prevent GSAP-transformed children from escaping section boundaries */
+/* Prevent GSAP-transformed children from escaping section boundaries.
+   Descending z-index so earlier sections cover the pinned HIW on scroll-up. */
 .hero, .logos, .features, .how-it-works, .stats, .testimonials, .pricing, .cta-section, footer {
   isolation: isolate;
   position: relative;
-  z-index: 0;
 }
+.hero         { z-index: 5; }
+.logos        { z-index: 4; }
+.features     { z-index: 3; }
+.how-it-works { z-index: 1; }
+.stats, .testimonials, .pricing, .cta-section, footer { z-index: 2; }
 
 /* ===== SECTION COMMONS ===== */
 .section-tag {
@@ -220,6 +225,7 @@ body {
   display: grid; grid-template-columns: 1fr 1fr;
   align-items: center; gap: 60px;
   padding: 120px 80px 80px;
+  background: var(--bg);
   position: relative; overflow: hidden;
 }
 .hero__canvas {
@@ -412,7 +418,7 @@ body {
 
 /* ===== LOGOS ===== */
 .logos {
-  padding: 40px 0;
+  padding: 40px 0; background: var(--bg);
   border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
   overflow: hidden;
 }
@@ -428,7 +434,7 @@ body {
 @keyframes logos-scroll { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 /* ===== FEATURES ===== */
-.features { padding: 120px 0; overflow: hidden; }
+.features { padding: 120px 0; overflow: hidden; background: var(--bg); }
 .features__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 
 .feature-card {
