@@ -57,11 +57,12 @@ function initScrollTriggerAnimations() {
     const decimals = parseInt(el.dataset.decimals ?? '0', 10);
 
     ScrollTrigger.create({
-      trigger: el, start: 'top 85%', once: true,
+      trigger: el, start: 'top 88%', once: true,
       onEnter: () => {
         const obj = { val: 0 };
         gsap.to(obj, {
-          val: target, duration: 2.2, ease: 'power2.out',
+          val: target, duration: 2.8, ease: 'power1.out',
+          delay: 0.3,
           onUpdate() {
             const formatted = target >= 1000
               ? Math.floor(obj.val).toLocaleString()

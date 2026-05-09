@@ -582,12 +582,13 @@ body {
 /* ===== STATS ===== */
 .stats { padding: 100px 0; overflow: hidden; }
 .stats__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 40px; }
-.stat-item { text-align: center; min-width: 0; }
+.stat-item { text-align: center; min-width: 0; overflow: visible; }
 .stat-item__value {
   font-family: var(--font-display); font-size: clamp(40px,5vw,60px);
-  font-weight: 800; line-height: 1;
+  font-weight: 800; line-height: 1.15;
   background: var(--grad); -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 12px;
+  padding: 0 4px;
 }
 .stat-item__label { font-size: 14px; color: var(--text-3); }
 
@@ -818,8 +819,8 @@ body {
   /* Stats */
   .stats { padding: 60px 0; }
   .stats__grid { grid-template-columns: repeat(2,1fr); gap: 20px; }
-  .stat-item { min-width: 0; overflow: hidden; }
-  .stat-item__value { font-size: clamp(22px, 5.5vw, 38px); word-break: break-all; }
+  .stat-item { min-width: 0; }
+  .stat-item__value { font-size: clamp(22px, 5.5vw, 38px); }
   .stat-item__label { font-size: 13px; }
 
   /* Testimonials */
