@@ -1,10 +1,17 @@
 /* ScrollTrigger animations — pinning, counters, card reveals, parallax */
 
+function hideScrollTriggerElements() {
+  gsap.set('.testimonial-card', { opacity: 0, y: 50 });
+  gsap.set('.pricing-card', { opacity: 0, y: 50 });
+  gsap.set('.stat-item', { opacity: 0, y: 40 });
+  gsap.set('.section-tag', { opacity: 0, scale: 0.85, y: 10 });
+  gsap.set('.section-sub', { opacity: 0, y: 20 });
+}
+
 function initScrollTriggerAnimations() {
 
   // ---- TESTIMONIALS ----
   const testimonialCards = gsap.utils.toArray('.testimonial-card');
-  gsap.set(testimonialCards, { opacity: 0, y: 50 });
   testimonialCards.forEach((card, i) => {
     gsap.to(card, {
       opacity: 1, y: 0,
@@ -20,7 +27,6 @@ function initScrollTriggerAnimations() {
 
   // ---- PRICING CARDS ----
   const pricingCards = gsap.utils.toArray('.pricing-card');
-  gsap.set(pricingCards, { opacity: 0, y: 50 });
   pricingCards.forEach((card, i) => {
     gsap.to(card, {
       opacity: 1, y: 0,
@@ -36,7 +42,6 @@ function initScrollTriggerAnimations() {
 
   // ---- STAT ITEMS ----
   const statItems = gsap.utils.toArray('.stat-item');
-  gsap.set(statItems, { opacity: 0, y: 40 });
   statItems.forEach((el, i) => {
     gsap.to(el, {
       opacity: 1, y: 0,
@@ -128,7 +133,6 @@ function initScrollTriggerAnimations() {
 
   // ---- SECTION TAGS ----
   gsap.utils.toArray('.section-tag').forEach((tag) => {
-    gsap.set(tag, { opacity: 0, scale: 0.85, y: 10 });
     gsap.to(tag, {
       opacity: 1, scale: 1, y: 0, duration: 0.5, ease: 'back.out(1.5)',
       scrollTrigger: { trigger: tag, start: 'top 92%', toggleActions: 'play none none none' },
@@ -137,7 +141,6 @@ function initScrollTriggerAnimations() {
 
   // ---- SECTION SUBS ----
   gsap.utils.toArray('.section-sub').forEach((el) => {
-    gsap.set(el, { opacity: 0, y: 20 });
     gsap.to(el, {
       opacity: 1, y: 0, duration: 0.7, ease: 'power3.out',
       scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none none' },

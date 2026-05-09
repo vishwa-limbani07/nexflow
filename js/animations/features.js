@@ -1,10 +1,11 @@
 /* Features section — ScrollTrigger stagger + tilt hover */
 
+function hideFeaturesElements() {
+  gsap.set('.feature-card', { opacity: 0, y: 50 });
+}
+
 function initFeaturesAnimations() {
   const cards = gsap.utils.toArray('.feature-card');
-
-  // Set initial hidden state in JS
-  gsap.set(cards, { opacity: 0, y: 50 });
 
   cards.forEach((card, i) => {
     gsap.to(card, {

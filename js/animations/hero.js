@@ -90,8 +90,7 @@ function initParticleCanvas() {
   });
 }
 
-function initHeroAnimations() {
-  // Set initial states in JS so elements are visible without JS too
+function hideHeroElements() {
   gsap.set('#hero-badge',    { opacity: 0, y: 20 });
   gsap.set('#hero-subtitle', { opacity: 0, y: 30 });
   gsap.set('#hero-cta',      { opacity: 0, y: 30 });
@@ -106,10 +105,11 @@ function initHeroAnimations() {
   gsap.set('#pill-1',        { opacity: 0, x: -40 });
   gsap.set('#pill-2',        { opacity: 0, x: 40 });
   gsap.set('#pill-3',        { opacity: 0, y: 40 });
+  gsap.set('.hero__title-line', { opacity: 0, y: 80, skewY: 3 });
+}
 
-  // Animate title lines as whole blocks — char splitting breaks word-wrap
+function initHeroAnimations() {
   const titleLines = document.querySelectorAll('.hero__title-line');
-  gsap.set(titleLines, { opacity: 0, y: 80, skewY: 3 });
 
   const tl = gsap.timeline({ delay: 0.5 });
 

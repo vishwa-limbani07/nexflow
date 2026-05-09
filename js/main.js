@@ -3,6 +3,11 @@
 document.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger, Observer);
 
+  // Hide all animated elements immediately (while loader covers the page)
+  hideHeroElements();
+  hideFeaturesElements();
+  hideScrollTriggerElements();
+
   // ---- PAGE LOADER ----
   const loader = document.createElement('div');
   loader.className = 'page-loader';
